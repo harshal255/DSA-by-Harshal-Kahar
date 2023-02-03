@@ -34,8 +34,9 @@ int main()
         {
             min = arr[i];
         }
+         cout << "The max & min element of array is : " << max << " and " << min << endl;
     }
-    cout << "The max & min element of array is : " << max << " and " << min << endl;
+   
 
     return 0;
 }
