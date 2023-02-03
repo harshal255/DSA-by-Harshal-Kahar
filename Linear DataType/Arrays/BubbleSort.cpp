@@ -8,22 +8,20 @@ void Swap(int &x, int &y)
     y = temp;
 }
 
-void SelectionSort(int arr[], int n)
+void BubbleSort(int arr[], int n)
 {
 
     for (int i = 0; i < n - 1; i++)
     {
-        int min = i;
-        for (int j = i + 1; j < n; j++)
+        for (int j = 0; j < n - i - 1; j++)
         {
-            if (arr[j] < arr[min])
+            if (arr[j] > arr[j + 1])
             {
-                min = j;
+                Swap(arr[j], arr[j + 1]);
             }
-
-            Swap(arr[min], arr[i]);
         }
     }
+
     cout << "Sorted array is: " << endl;
     for (int i = 0; i < n; i++)
     {
@@ -55,7 +53,7 @@ int main()
     }
 
     cout << endl;
-    SelectionSort(arr, a);
+    BubbleSort(arr, a);
 
     return 0;
 }
