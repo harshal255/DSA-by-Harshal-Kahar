@@ -9,7 +9,7 @@ public:
         int min = INT_MAX, max = INT_MIN;
         for (int i = 0; i < N; i++)
         {
-           
+
             if (A[i] > max)
             {
                 max = A[i];
