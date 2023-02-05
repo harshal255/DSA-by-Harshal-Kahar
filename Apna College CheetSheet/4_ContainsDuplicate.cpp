@@ -19,11 +19,13 @@ using namespace std;
 bool containsDuplicate(vector<int> &nums)
 {
     unordered_set<int> set;
+    int duplicate = 0;
     for (int i = 0; i < nums.size(); i++)
     {
         // count is a member function of the C++ Standard Template Library (STL) container class std::unordered_set (and also std::set). It returns the number of elements in the container with the given key. If the key is present in the container, it returns 1, otherwise it returns 0.
         if (set.count(nums[i]))
         {
+            
             return true;
         }
 
