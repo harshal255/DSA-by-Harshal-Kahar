@@ -3,7 +3,6 @@ using namespace std;
 
 int main()
 {
-
     map<string, int> marksMap;
     marksMap["Harshal"] = 98;
     marksMap["Jennifer"] = 59;
