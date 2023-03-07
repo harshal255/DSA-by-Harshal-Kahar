@@ -1,4 +1,4 @@
-//false
+// false
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -26,6 +26,7 @@ bool check(vector<int> &nums)
         // cout << nums[i] << "," << nums[n-1] << "  ";
         if (nums[i] == nums[n - 1])
         {
+            
             return false;
         }
         if (nums[i] > nums[n - 1])
@@ -39,6 +40,7 @@ bool check(vector<int> &nums)
                 return true;
             }
         }
+       
     }
     cout << endl;
     return false;
@@ -66,7 +68,7 @@ int main()
         cout << ele << " ";
     }
     cout << endl;
-    check(v);
+    cout << check(v);
 
     return 0;
 }

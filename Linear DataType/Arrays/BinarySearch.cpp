@@ -13,7 +13,7 @@ int BinarySearch(int arr[], int n)
     for (int i = 0; i <= end; i++)
 
     {
-        int middle = (init + end) / 2;
+        int middle = init + (end - init) / 2; //for prevent error for large value of end & init
         if (arr[middle] == Search)
         {
             cout << "Your element " << Search << " Found at index " << middle << endl;
