@@ -5,45 +5,24 @@ using namespace std;
 
 bool check(vector<int> &nums)
 {
+    int count = 0;
     int n = nums.size();
-    int min = INT_MAX, max = INT_MIN;
-    for (int i = 0; i < n; i++)
-    {
 
-        if (nums[i] > max)
-        {
-            max = nums[i];
-        }
-        if (nums[i] < min)
-        {
-            min = nums[i];
-        }
-    }
-    cout << min << " " << max;
-    cout << endl;
-    for (int i = 0; i < n; i++)
+    for (int i = 1; i < n; i++)
     {
-        // cout << nums[i] << "," << nums[n-1] << "  ";
-        if (nums[i] == nums[n - 1])
+        if (nums[i - 1] > nums[i])
         {
-            
-            return false;
+            cout << count << endl;
+            count++;
         }
-        if (nums[i] > nums[n - 1])
-        {
-            if (nums[i] > nums[min])
-            {
-                return true;
-            }
-            if (nums[min + 1] < nums[n - 1])
-            {
-                return true;
-            }
-        }
-       
     }
-    cout << endl;
-    return false;
+    if (nums[n - 1] > nums[0])
+    {
+        count++;
+    }
+    cout << count << endl;
+
+    return count <= 1; //(count = 0(for each element equal) or 1)
 }
 
 int main()
