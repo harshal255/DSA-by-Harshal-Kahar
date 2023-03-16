@@ -15,14 +15,12 @@ vector<int> sieveOfEratosthenes(int N)
             }
         }
     }
-    vector<int> AllPrime;//create new vector;
+    vector<int> AllPrime; // create new vector;
     for (int i = 2; i <= N; i++)
     {
         if (prime[i] == false)
         {
             AllPrime.push_back(i);
-           
-            cout << i << " ";
         }
     }
 
@@ -46,7 +44,11 @@ int main()
     //     cout << v[i] << " ";
     // }
     // cout << endl;
-    sieveOfEratosthenes(n);
+    vector<int> v1 = sieveOfEratosthenes(n);
+    for (auto ele : v1)
+    {
+        cout << ele << " ";
+    }
 
     return 0;
 }

@@ -1,9 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int isPrime(int N)
+bool isPrime(int N)
 {
     if (N <= 1)
+    {
+        return 0;
+    }
+    if (N > 2 && N % 2 == 0)
     {
         return 0;
     }
@@ -22,16 +26,18 @@ vector<int> primeNumbersTillN(int N)
 {
     vector<int> ans;
     int i = 0;
+    int count = 0;
     while (i <= N)
     {
-        
+
         if (isPrime(i))
         {
             ans.push_back(i);
+            count++;
         }
         i++;
     }
-   
+
     return ans;
 }
 

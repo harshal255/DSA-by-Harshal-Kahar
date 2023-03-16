@@ -17,9 +17,7 @@ class Employee{
 };
 
 int main(){
-   //Employee harshal,rahul,hiral;
-   //harshal.setid();
-   //harshal.getid();
+  
    Employee fb[5];
    for(int i=0 ; i<4;i++){
        fb[i].setid();

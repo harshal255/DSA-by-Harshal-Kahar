@@ -7,6 +7,10 @@ int isPrime(int N)
     {
         return 0;
     }
+    if (N > 2 && N % 2 == 0)
+    {
+        return 0;
+    }
 
     for (int i = 2; i <= sqrt(N); i++)
     {
