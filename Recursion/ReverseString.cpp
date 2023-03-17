@@ -1,23 +1,26 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-void reverse(string s)
+void reverse(string &s, int i, int j)
 {
-    if (s.length() == 0)
+    cout << "Call recieved for " << s << endl;
+
+    if (i > j)
     {
         return;
     }
-    string restOfString = s.substr(1); // first position & 2nd argument is length
-    // cout << restOfString << " ";
-    reverse(restOfString);
-    cout << s[0];
+    swap(s[i], s[j]);
+    i++;
+    j--;
+
+    reverse(s, i, j);
 }
 
 int main()
 {
     string s;
     cin >> s;
-    reverse(s);
+    reverse(s, 0, s.size() - 1);
+    cout << s << endl;
 
     return 0;
 }
