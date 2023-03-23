@@ -24,7 +24,7 @@ public:
         this->health = health;
         this->level = level;
     }
-
+ 
     // Copy constructor
     Hero(Hero &temp)
     {
