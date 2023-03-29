@@ -27,7 +27,7 @@ Node<int> *solve(Node<int> *first, Node<int> *second)
 {
 
     // if only one element is present in list 1 then
-    if (first->next == NULL)
+    if (first->next == NULL) 
     {
         first->next = second;
         return first;
